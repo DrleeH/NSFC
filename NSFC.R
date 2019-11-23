@@ -27,7 +27,7 @@ ExtractNSFC <- function(url, Abstract = T, index = 0){
                 Abstract <- c(Abstract, "")
             }else{
                 index <- index + 1
-                if(index == 20){
+                if(index >= 20){
                     Sys.sleep(600)
                     index <- 0
                 }
@@ -115,7 +115,7 @@ NSFC <- function(items, StartYear, EndYear, Abstract = T,
                     }
                     for(i in 1:AllPage){
                         index <- index + 1
-                        if(index == 20){
+                        if(index >= 20){
                             Sys.sleep(600)
                             index <- 0
                         }
@@ -137,7 +137,7 @@ NSFC <- function(items, StartYear, EndYear, Abstract = T,
                 resultPa <- c()
                 for(i in 1:AllPage){
                     index <- index + 1
-                    if(index == 20){
+                    if(index >= 20){
                         Sys.sleep(600)
                         index <- 0
                     }
